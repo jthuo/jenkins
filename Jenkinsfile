@@ -2,18 +2,18 @@ pipeline{
 //to ran on any agent
   agent any
   stages{
-      stages('build'){
+      stages("build"){
         steps {
                 echo 'Hello, Maven'
                 sh 'mvn --version'
             }  
       }
-      stages('test'){
+      stages("test"){
           steps {
           eco 'testing the application'
           }
       }
-      stages('deploy'){
+      stages("deploy"){
           steps {
           eco 'deploying the application'
           }
